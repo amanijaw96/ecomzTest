@@ -1,2 +1,7 @@
-<p>home works!</p>
-<button mat-button color="primary">Primary</button>
+<div class="NewButtonWrapper">
+  <button mat-stroked-button class="AddSectionButton">+ Add New Section</button>
+</div>
+
+<div *ngFor="let section of sections">
+  <app-imagesection [section]="section"></app-imagesection>
+</div>
