@@ -6,7 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  sections = ['h', 'l', 'll'];
+  sections = [
+    {
+      imageAlignment: 'right',
+      textColor: 'red',
+      class: 'image-right red-text',
+    },
+    {
+      imageAlignment: 'left',
+      textColor: 'red',
+      class: 'image-left blue-text',
+    },
+  ];
   constructor() {}
 
   ngOnInit(): void {}

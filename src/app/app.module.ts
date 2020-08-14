@@ -7,6 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ImagesectionComponent } from './imagesection/imagesection.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ImagesectionComponent],
@@ -16,6 +18,8 @@ import { ImagesectionComponent } from './imagesection/imagesection.component';
     MatToolbarModule,
     MatButtonModule,
     BrowserAnimationsModule,
+    MatRadioModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
