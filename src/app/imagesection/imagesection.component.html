@@ -1,5 +1,11 @@
 <div class="{{ section.class }}">
-  <div class="image">Image Box {{ index + 1 }}</div>
+  <div class="image">
+    <img
+      style="width: 100%; height: 100%;"
+      src="../../assets/images/afc80bc7231b97c6eb9a20b2b6e2565a.jpg"
+      alt="section_Image"
+    />
+  </div>
   <div class="text">
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -40,5 +46,16 @@
       <mat-option value="blue">blue text</mat-option>
       <mat-option value="red">red text</mat-option>
     </mat-select>
+  </div>
+  <div
+    class="deletebutton"
+    (click)="
+      deleteChild.emit({
+        index: index
+      })
+    "
+  >
+    <span>Delete Section {{ index + 1 }}</span>
+    <mat-icon aria-hidden="false" aria-label="delete icon">delete</mat-icon>
   </div>
 </div>

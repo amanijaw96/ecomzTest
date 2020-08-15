@@ -13,6 +13,15 @@
   color: blue;
 }
 
+.deletebutton {
+  grid-row-start: 9;
+  grid-row-end: 10;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  color: red;
+  display: flex;
+  align-items: center;
+}
 .image-left .image {
   grid-row-start: 1;
   grid-row-end: 9;
@@ -75,6 +84,12 @@
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 10;
+    justify-content: space-between;
+    display: flex;
+    padding: 2px;
+  }
+  .OptionsWrapper .mat-select {
+    width: 30%;
   }
   .image-left .image {
     grid-row-start: 4;
@@ -103,9 +118,5 @@
     grid-column-end: 9;
     padding: 5px;
     font-size: 13px;
-  }
-  .OptionsWrapper {
-    display: flex;
-    padding: 2px;
   }
 }

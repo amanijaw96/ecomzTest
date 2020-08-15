@@ -9,6 +9,7 @@ export class ImagesectionComponent implements OnInit {
   @Input() section;
   @Input() index;
   @Output() updateParent = new EventEmitter();
+  @Output() deleteChild = new EventEmitter();
 
   constructor() {}
   ngOnInit(): void {}

@@ -52,5 +52,12 @@ export class HomeComponent implements OnInit {
     });
   };
 
+  onSectionDelete(event) {
+    let index = event.index;
+    this.sections = [
+      ...this.sections.slice(0, index),
+      ...this.sections.slice(index + 1),
+    ];
+  }
   ngOnInit(): void {}
 }

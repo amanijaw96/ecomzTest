@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ImagesectionComponent } from './imagesection/imagesection.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ImagesectionComponent],
@@ -20,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
     BrowserAnimationsModule,
     MatRadioModule,
     MatSelectModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
