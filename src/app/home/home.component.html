@@ -1,7 +1,13 @@
 <div class="NewButtonWrapper">
-  <button mat-stroked-button class="AddSectionButton">+ Add New Section</button>
+  <button (click)="AddNewSection()" mat-stroked-button class="AddSectionButton">
+    + Add New Section
+  </button>
 </div>
 
-<div *ngFor="let section of sections">
-  <app-imagesection [section]="section"></app-imagesection>
+<div *ngFor="let section of sections; let i = index">
+  <app-imagesection
+    [section]="section"
+    [index]="i"
+    (updateParent)="onSectionChange($event)"
+  ></app-imagesection>
 </div>

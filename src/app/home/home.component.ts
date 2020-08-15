@@ -18,7 +18,20 @@ export class HomeComponent implements OnInit {
       class: 'image-left blue-text',
     },
   ];
+
   constructor() {}
 
+  AddNewSection() {
+    let newSection = {
+      imageAlignment: 'left',
+      textColor: 'red',
+      class: 'image-left blue-text',
+    };
+    this.sections = [...this.sections, newSection];
+  }
+
+  onSectionChange(event) {
+    console.log(event);
+  }
   ngOnInit(): void {}
 }

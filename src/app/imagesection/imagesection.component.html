@@ -1,25 +1,43 @@
 <div class="{{ section.class }}">
-  <div class="image">
-    Image Box
-  </div>
+  <div class="image">Image Box {{ index }}</div>
   <div class="text">
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation
   </div>
   <div class="OptionsWrapper">
-    <mat-radio-group class="radioButtonGroup" aria-label="Select an option">
-      <mat-radio-button class="radioButton" value="image-right"
+    <mat-radio-group
+      (change)="
+        updateParent.emit({
+          index: index,
+          attribute: 'imageAlignment',
+          value: $event.value
+        })
+      "
+      class="radioButtonGroup"
+      aria-label="Select an option"
+    >
+      <mat-radio-button class="radioButton" value="right"
         >Image Right</mat-radio-button
       >
-      <mat-radio-button class="radioButton" value="image-left"
+      <mat-radio-button class="radioButton" value="left"
         >Image Left</mat-radio-button
       >
     </mat-radio-group>
 
-    <mat-select style="margin-top: 20px;">
-      <mat-option>blue text</mat-option>
-      <mat-option>red text</mat-option>
+    <mat-select
+      style="margin-top: 20px;"
+      (selectionChange)="
+        updateParent.emit({
+          index: index,
+          attribute: 'textColor',
+          value: $event.value
+        })
+      "
+    >
+      <mat-option value="blue">blue text</mat-option>
+      <mat-option value="red">red text</mat-option>
     </mat-select>
+    <button (click)="updateParent.emit({ event: index, ui: 'hi' })">hi</button>
   </div>
 </div>
