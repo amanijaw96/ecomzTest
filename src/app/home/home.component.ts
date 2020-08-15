@@ -12,11 +12,6 @@ export class HomeComponent implements OnInit {
       textColor: 'red',
       class: 'image-right red-text',
     },
-    {
-      imageAlignment: 'left',
-      textColor: 'red',
-      class: 'image-left blue-text',
-    },
   ];
 
   constructor() {}
