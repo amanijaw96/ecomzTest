@@ -31,7 +31,26 @@ export class HomeComponent implements OnInit {
   }
 
   onSectionChange(event) {
-    console.log(event);
+    let ref = this;
+    let index = event.index;
+    ref.sections = Object.assign([...ref.sections], {
+      [index]: {
+        ...ref.sections[index],
+        [event.attribute]: event.value,
+      },
+    });
+    ref.generateClass(ref.sections[index], index);
   }
+
+  generateClass = (secttion, index) => {
+    let ref = this;
+    ref.sections = Object.assign([...ref.sections], {
+      [index]: {
+        ...ref.sections[index],
+        class: `image-${secttion.imageAlignment} ${secttion.textColor}-text`,
+      },
+    });
+  };
+
   ngOnInit(): void {}
 }

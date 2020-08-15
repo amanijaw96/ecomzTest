@@ -1,5 +1,5 @@
 <div class="{{ section.class }}">
-  <div class="image">Image Box {{ index }}</div>
+  <div class="image">Image Box {{ index + 1 }}</div>
   <div class="text">
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -14,6 +14,7 @@
           value: $event.value
         })
       "
+      value="{{ section.imageAlignment }}"
       class="radioButtonGroup"
       aria-label="Select an option"
     >
@@ -34,10 +35,10 @@
           value: $event.value
         })
       "
+      value="{{ section.textColor }}"
     >
       <mat-option value="blue">blue text</mat-option>
       <mat-option value="red">red text</mat-option>
     </mat-select>
-    <button (click)="updateParent.emit({ event: index, ui: 'hi' })">hi</button>
   </div>
 </div>
